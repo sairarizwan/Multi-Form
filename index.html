@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Multi step form</title>
+	<link rel="stylesheet"  href="style.css">
+
+</head>
+<body>
+
+	<div class="first-box">
+		<form id="form1">
+			<h3> PERSONAL DETAILS</h3>
+			<input type="text" placeholder="First Name">
+			<input type="text" placeholder="Last Name">
+			<input type="text" placeholder="Mobile No">
+
+		
+		<div class="btn-box">
+			<button type="button" id="next1">Next</button>
+			
+		</div>
+		</form>
+		<form id="form2">
+			<h3>SOCIAL LINKS</h3>
+			<input type="text" placeholder="Facebook">
+			<input type="text" placeholder="Instragram">
+			<input type="text" placeholder="Twitter">
+
+		
+		<div class="btn-box">
+			<button type="button" id="back1">Back</button>
+			<button type="button" id="next2">Next</button>
+			
+		</div>
+		</form>
+		<form id="form3">
+			<h3>Creat An Account</h3>
+			<input type="text" placeholder="Email">
+			<input type="password" placeholder="Password">
+			<input type="password" placeholder="Confirm Password">
+
+		
+		<div class="btn-box">
+			<button type="button" id="back2">Back</button>
+			<button type="submit">Submit</button>
+			
+		</div>
+		</form>
+
+		<div class="step-row">
+			<div id="progress"></div>
+			<div class="step-col"><small>step1</small></div>
+			<div class="step-col"><small>step2</small></div>
+			<div class="step-col"><small>step3</small></div>
+
+
+		</div>
+
+	</div>
+<script>  
+	var form1=document.getElementById('form1');
+	var form2=document.getElementById('form2');
+	var form3=document.getElementById('form3');
+
+
+	var next1=document.getElementById('next1');
+	var next2=document.getElementById('next2');
+
+	var back1=document.getElementById('back1');
+	var back2=document.getElementById('back2');
+
+	var progress=document.getElementById('progress');
+	next1.onclick=function()
+	{
+		form1.style.left= "-400px";
+		form2.style.left= "40px";
+        progress.style.width= "230px";
+
+
+	}
+	back1.onclick=function()
+	{
+		form1.style.left= "40px";
+		form2.style.left= "450px";
+      progress.style.width= "130px";
+
+
+	}
+	next2.onclick=function()
+	{
+		form2.style.left= "-400px";
+		form3.style.left= "40px";
+		progress.style.width= "340px";
+
+
+
+	}
+	back2.onclick=function()
+	{
+		form2.style.left= "40px";
+		form3.style.left= "450px";
+		progress.style.width= "230px";
+
+
+
+
+	}
+
+ </script>
+
+</body>
+</html>
